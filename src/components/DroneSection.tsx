@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-// https://images.unsplash.com/photo-1508614589041-895b9394f79f is known working aerial survey
-const droneSurvey = "https://images.unsplash.com/photo-1508614589041-895b9394f79f?q=80&w=2070&auto=format&fit=crop";
+import droneSurvey from "@/assets/drone-survey.png";
 import { CheckCircle2, Zap } from "lucide-react";
 
 const benefits = [

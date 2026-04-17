@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-const heroBg = "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=2070&auto=format&fit=crop";
+import heroBg from "@/assets/hero-bg.png";
 import { ArrowDown, Crosshair, Satellite } from "lucide-react";
 
 const Hero = () => {

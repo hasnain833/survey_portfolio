@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-const project1 = "https://images.unsplash.com/photo-1591193022657-12440b894c5e?q=80&w=2070&auto=format&fit=crop";
-const project2 = "https://images.unsplash.com/photo-1517089531631-13763c3d5507?q=80&w=2070&auto=format&fit=crop";
-const project3 = "https://images.unsplash.com/photo-1503387762-441112411e86?q=80&w=2070&auto=format&fit=crop";
-const project4 = "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop";
+import project1 from "@/assets/project-1.png";
+import project2 from "@/assets/project-2.png";
+import project3 from "@/assets/project-3.png";
+import project4 from "@/assets/project-4.jpg";
 import { ArrowUpRight } from "lucide-react";
 
 const projects = [
