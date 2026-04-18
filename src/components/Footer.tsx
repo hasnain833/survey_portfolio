@@ -48,7 +48,7 @@ const Footer = () => {
             <div className="space-y-2.5">
               {[
                 { icon: Phone, text: "+966 XX XXX XXXX" },
-                { icon: Mail,  text: "surveyor@example.com" },
+                { icon: Mail, text: "surveyor@example.com" },
                 { icon: MapPin, text: "Saudi Arabia" },
               ].map((item) => (
                 <div key={item.text} className="flex items-center gap-2.5 text-foreground/40 hover:text-foreground/70 transition-colors">
@@ -84,14 +84,14 @@ const Footer = () => {
         {/* Divider */}
         <div className="border-t border-border pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-foreground/25 text-xs" style={{ fontFamily: "var(--font-mono)" }}>
-            © {new Date().getFullYear()} SurveyPro. All rights reserved. Saudi Arabia.
+            © {new Date().getFullYear()} Mohsin Aftab. All rights reserved. Saudi Arabia.
           </p>
 
           {/* Social icons */}
           <div className="flex items-center gap-3">
             {[
-              { 
-                label: "LinkedIn", href: "#", 
+              {
+                label: "LinkedIn", href: "#",
                 icon: (props: any) => (
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
@@ -100,8 +100,8 @@ const Footer = () => {
                   </svg>
                 )
               },
-              { 
-                label: "Twitter", href: "#", 
+              {
+                label: "Twitter", href: "#",
                 icon: (props: any) => (
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
                     <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />

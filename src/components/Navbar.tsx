@@ -37,53 +37,49 @@ const Navbar = () => {
 
   return (
     <>
-      <motion.nav
-        initial={{ y: -80, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? "glass-strong shadow-lg py-3"
-            : "bg-transparent py-5"
-        }`}
-      >
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-6">
+      <div className="fixed top-0 left-0 right-0 z-50 flex justify-center p-6">
+        <motion.nav
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className={`group flex items-center gap-8 px-6 py-3 rounded-full transition-all duration-500 ${
+            scrolled
+              ? "glass-strong shadow-lg border-white/20"
+              : "glass border-transparent"
+          }`}
+        >
           {/* Logo */}
           <a
             href="#home"
-            className="flex items-center gap-2.5 group"
+            className="flex items-center gap-2 group/logo"
           >
-            <div className="w-8 h-8 bg-gradient-blue rounded-lg flex items-center justify-center shadow-blue group-hover:scale-110 transition-transform">
-              <MapPin className="w-4 h-4 text-white" />
-            </div>
             <span
-              className="text-xl font-bold tracking-tight text-foreground"
+              className="text-lg font-black tracking-tighter text-slate-900"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              SURVEY<span className="text-gradient-blue">PRO</span>
+              MOHSIN<span className="text-blue-500">AFTAB</span>
             </span>
           </a>
 
           {/* Desktop nav */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-1 bg-black/5 rounded-full p-1 border border-black/5">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href.replace("#", "");
               return (
                 <a
                   key={link.href}
                   href={link.href}
-                  className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+                  className={`relative px-5 py-1.5 text-[13px] font-bold rounded-full transition-all duration-300 ${
                     isActive
-                      ? "text-foreground font-semibold"
-                      : "text-foreground/60 hover:text-foreground"
+                      ? "text-slate-900"
+                      : "text-slate-500 hover:text-slate-900"
                   }`}
                 >
                   {isActive && (
                     <motion.span
                       layoutId="nav-pill"
-                      className="absolute inset-0 rounded-lg"
-                      style={{ background: "hsl(210 100% 50% / 0.08)", border: "1px solid hsl(210 100% 50% / 0.15)" }}
-                      transition={{ type: "spring", stiffness: 400, damping: 35 }}
+                      className="absolute inset-0 bg-white shadow-sm rounded-full"
+                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
                     />
                   )}
                   <span className="relative z-10">{link.label}</span>
@@ -92,25 +88,25 @@ const Navbar = () => {
             })}
           </div>
 
-          {/* CTA + Mobile toggle */}
-          <div className="flex items-center gap-3">
+          {/* Desktop CTA / Mobile toggle */}
+          <div className="flex items-center gap-2">
             <a
               href="#contact"
-              className="hidden lg:flex items-center gap-2 bg-gradient-blue text-white text-sm font-semibold px-5 py-2 rounded-lg shadow-blue hover:opacity-90 hover:scale-105 transition-all duration-200"
+              className="hidden lg:flex items-center gap-2 bg-slate-900 text-white text-[11px] uppercase tracking-widest font-black px-6 py-2 rounded-full hover:bg-blue-600 transition-all duration-300 active:scale-95"
             >
               Hire Me
             </a>
 
             <button
-              className="lg:hidden w-10 h-10 glass rounded-lg flex items-center justify-center text-foreground/80 hover:text-foreground transition-colors"
+              className="lg:hidden w-10 h-10 flex items-center justify-center text-slate-900"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle menu"
             >
               {mobileOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
-        </div>
-      </motion.nav>
+        </motion.nav>
+      </div>
 
       {/* Mobile drawer */}
       <AnimatePresence>
@@ -148,11 +144,10 @@ const Navbar = () => {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: i * 0.05 }}
                       onClick={() => setMobileOpen(false)}
-                      className={`px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${
-                        isActive
-                          ? "bg-gradient-blue text-white shadow-blue"
-                          : "text-foreground/60 hover:text-foreground hover:bg-black/5"
-                      }`}
+                      className={`px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${isActive
+                        ? "bg-gradient-blue text-white shadow-blue"
+                        : "text-foreground/60 hover:text-foreground hover:bg-black/5"
+                        }`}
                     >
                       {link.label}
                     </motion.a>
