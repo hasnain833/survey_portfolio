@@ -4,16 +4,19 @@ const footerLinks = {
   Navigation: [
     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
+    { label: "Expertise", href: "#expertise" },
+    { label: "Skills", href: "#skills" },
     { label: "Services", href: "#services" },
-    { label: "Drone Mapping", href: "#drone" },
     { label: "Projects", href: "#projects" },
+    { label: "Contact", href: "#contact" },
   ],
   Services: [
     { label: "Land Surveying", href: "#services" },
-    { label: "Site Analysis", href: "#services" },
-    { label: "Aerial Mapping", href: "#drone" },
+    { label: "Site Analysis & Planning", href: "#services" },
+    { label: "Drone Aerial Mapping", href: "#services" },
+    { label: "Sewerage & Treatment Plants", href: "#services" },
     { label: "Construction Layout", href: "#services" },
-    { label: "GIS & Reporting", href: "#services" },
+    { label: "GIS & Spatial Analysis", href: "#services" },
   ],
 };
 
@@ -47,8 +50,8 @@ const Footer = () => {
             {/* Contact mini */}
             <div className="space-y-2.5">
               {[
-                { icon: Phone, text: "+966 XX XXX XXXX" },
-                { icon: Mail, text: "surveyor@example.com" },
+                { icon: Phone, text: "+966 0582384135 \ 0581297689 " },
+                { icon: Mail, text: "mohsinaftab@outlook.com " },
                 { icon: MapPin, text: "Saudi Arabia" },
               ].map((item) => (
                 <div key={item.text} className="flex items-center gap-2.5 text-foreground/40 hover:text-foreground/70 transition-colors">

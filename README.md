@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# Survey Portfolio Project
 
 TODO: Document your project here

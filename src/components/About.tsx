@@ -1,131 +1,108 @@
 import { motion } from "framer-motion";
-import surveyorWork from "@/assets/surveyor-work.png";
-import { MapPin, Award, Briefcase, Target } from "lucide-react";
+import { MapPin, Award, Briefcase, Target, CheckCircle2 } from "lucide-react";
 
 const stats = [
-  { icon: MapPin, label: "Based In", value: "Saudi Arabia", color: "blue" },
-  { icon: Award, label: "Specialty", value: "Land Surveying", color: "amber" },
-  { icon: Briefcase, label: "Experience", value: "10+ Years", color: "teal" },
-  { icon: Target, label: "Accuracy", value: "±5mm GPS", color: "blue" },
+  { icon: MapPin, label: "Current Base", value: "Saudi Arabia", color: "blue" },
+  { icon: Award, label: "Core Specialty", value: "Infrastructure", color: "amber" },
+  { icon: Briefcase, label: "Career Span", value: "15+ Years", color: "teal" },
+  { icon: Target, label: "Precision Rate", value: "±5mm GPS", color: "blue" },
+];
+
+const highlights = [
+  "Pipeline & Treatment Plant Expert",
+  "Licensed UAV Pilot (GACA 107)",
+  "Strategic Consulting & Planning",
+  "High-Accuracy Geodetic Control"
 ];
 
 const About = () => {
   return (
-    <section id="about" className="py-28 relative overflow-hidden">
-      {/* Subtle grid background */}
-      <div className="absolute inset-0 grid-overlay-subtle" />
-
-      {/* Ambient glow */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 -translate-y-1/2 rounded-full bg-blue-500/5 blur-3xl pointer-events-none" />
+    <section id="about" className="py-20 relative overflow-hidden bg-white">
+      {/* Background accents */}
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
+      <div className="absolute inset-0 grid-overlay-subtle opacity-30" />
 
       <div className="max-w-7xl mx-auto px-6 relative">
-        {/* Section header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="flex items-center gap-4 mb-16"
-        >
-          <span className="section-badge">// 01 — About Me</span>
-          <div className="h-px flex-1 bg-gradient-to-r from-blue-500/30 to-transparent" />
-        </motion.div>
-
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Image column */}
+        {/* Section Header */}
+        <div className="max-w-4xl mb-12">
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="relative"
+            className="flex items-center gap-3 mb-4"
           >
-            {/* Corner decoration */}
-            <div className="absolute -top-4 -left-4 w-20 h-20 border-l-2 border-t-2 border-blue-500/40 rounded-tl-2xl z-10" />
-            <div className="absolute -bottom-4 -right-4 w-20 h-20 border-r-2 border-b-2 border-amber-400/40 rounded-br-2xl z-10" />
+            <span className="section-badge font-bold">// 01 — Profile</span>
+            <div className="h-px w-12 bg-blue-500/30" />
+          </motion.div>
 
-            <div className="rounded-2xl overflow-hidden shadow-card-hover border border-white/5">
-              <img
-                src={surveyorWork}
-                alt="Surveyor working with total station"
-                className="w-full h-[520px] object-cover"
-                loading="lazy"
-                width={800}
-                height={600}
-              />
-              {/* Overlay gradient on bottom */}
-              <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-background to-transparent" />
-            </div>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-black text-slate-900 leading-[1.1] tracking-tighter"
+          >
+            Pioneering Precision in <br />
+            <span className="text-gradient-blue">Global Infrastructure.</span>
+          </motion.h2>
+        </div>
 
-            {/* Floating badge */}
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+          {/* Left Side: Bio */}
+          <div className="lg:col-span-8">
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              className="absolute bottom-8 left-6 glass px-5 py-3 rounded-xl shadow-card"
+              className="space-y-6 text-lg text-slate-600 font-medium leading-relaxed"
             >
-              <p className="mono-tag text-foreground/50 mb-1">CURRENT REGION</p>
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-blue-400" />
-                <span className="text-foreground font-semibold text-sm" style={{ fontFamily: "var(--font-display)" }}>
-                  Saudi Arabia
-                </span>
+              <p className="text-slate-900 font-bold text-2xl leading-tight max-w-2xl">
+                I lead infrastructure development by bridging the gap between <span className="text-blue-600 underline decoration-blue-500/20 underline-offset-4">traditional surveying mastery</span> and cutting-edge UAV intelligence.
+              </p>
+              <p className="max-w-3xl">
+                As an accomplished <span className="text-slate-900 font-bold">Senior Surveyor and Strategic Consultant</span> with over 15 years of international field experience, I specialize in the planning and execution of large-scale pipeline and treatment plant projects.
+              </p>
+              <p className="max-w-3xl">
+                My methodology focuses on absolute precision—leveraging GACA-licensed drone operations and advanced geomatics to deliver millimetric accuracy for complex engineering challenges across Saudi Arabia and Pakistan.
+              </p>
+
+              {/* Highlights List */}
+              <div className="grid sm:grid-cols-2 gap-y-4 gap-x-8 pt-8 border-t border-slate-100 mt-10">
+                {highlights.map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <div className="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center">
+                      <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                    </div>
+                    <span className="text-sm font-bold text-slate-800">{item}</span>
+                  </div>
+                ))}
               </div>
             </motion.div>
-          </motion.div>
+          </div>
 
-          {/* Content column */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
-              Professional{" "}
-              <span className="text-gradient-blue">Land Surveyor</span>
-            </h2>
-
-            <div className="space-y-4 text-slate-700 font-medium leading-relaxed mb-10">
-              <p>
-                I am a professional land surveyor with extensive experience working across Saudi Arabia and the wider region. Over the years I have been involved in surveying and analyzing land for construction projects, helping companies accurately plan and develop buildings and infrastructure.
-              </p>
-              <p>
-                My work includes site surveying, measurements, data collection, and providing precise information essential before construction begins. I have hands-on experience across varied project types — ensuring accuracy, reliability, and efficiency at every stage.
-              </p>
-              <p>
-                Equipped with cutting-edge drone technology and traditional instrument expertise, I bridge legacy survey methods with modern UAV workflows to deliver faster, more cost-effective results.
-              </p>
-            </div>
-
-            {/* Stats grid */}
-            <div className="grid grid-cols-2 gap-4">
+          {/* Right Side: Quick Stats Column */}
+          <div className="lg:col-span-4 lg:sticky lg:top-32">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="grid gap-4"
+            >
               {stats.map((stat, i) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className={`glass p-4 rounded-xl ${stat.color === "amber" ? "stat-border-amber" : "stat-border"}`}
-                >
-                  <stat.icon
-                    className={`w-5 h-5 mb-2 ${
-                      stat.color === "amber"
-                        ? "text-amber-400"
-                        : stat.color === "teal"
-                        ? "text-teal-400"
-                        : "text-blue-400"
-                    }`}
-                  />
-                  <p className="text-foreground font-bold text-sm" style={{ fontFamily: "var(--font-display)" }}>
-                    {stat.value}
-                  </p>
-                  <p className="mono-tag text-slate-500 font-semibold mt-0.5">{stat.label}</p>
-                </motion.div>
+                <div key={i} className="p-6 rounded-3xl bg-slate-50 border border-slate-100 group hover:border-blue-500/20 transition-all duration-300">
+                  <div className="flex items-center gap-4">
+                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${stat.color === 'blue' ? 'bg-blue-100/50 text-blue-600' : stat.color === 'amber' ? 'bg-amber-100/50 text-amber-600' : 'bg-teal-100/50 text-teal-600'
+                      }`}>
+                      <stat.icon className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">{stat.label}</p>
+                      <p className="text-lg font-black text-slate-900 tracking-tight">{stat.value}</p>
+                    </div>
+                  </div>
+                </div>
               ))}
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>

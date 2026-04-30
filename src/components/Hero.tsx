@@ -32,9 +32,9 @@ const Hero = () => {
       <CoordCorner className="bottom-16 left-8 opacity-40 text-blue-500" label="ALT 612m" small />
       <CoordCorner className="bottom-16 right-8 opacity-40 text-right text-blue-500" label="HDOP 0.8" small reverse />
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 h-screen flex items-center pt-20 lg:pt-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 min-h-screen flex items-center pt-24 lg:pt-32 pb-24">
         <div className="grid lg:grid-cols-2 gap-4 lg:gap-0 items-center w-full">
-          
+
           {/* Left Column: Content */}
           <div className="text-center lg:text-left order-2 lg:order-1 max-w-xl">
             {/* Tagline */}
@@ -46,7 +46,7 @@ const Hero = () => {
             >
               <div className="w-8 h-[1px] bg-blue-500 hidden lg:block" />
               <span className="mono-tag text-blue-600 font-black text-[10px] tracking-[0.2em] uppercase">
-                Expert Land Surveyor
+                Accomplished Senior Surveyor
               </span>
             </motion.div>
 
@@ -55,11 +55,11 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-slate-900 leading-[0.95] mb-5 tracking-tighter"
+              className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-slate-900 leading-[0.95] mb-4 tracking-tighter"
             >
-              Precision 
+              Engineering Precision.
               <br />
-              <span className="text-blue-600">Surveying.</span>
+              <span className="text-blue-600">Elevating Insight.</span>
             </motion.h1>
 
             {/* Bio */}
@@ -67,9 +67,9 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-slate-500 text-base sm:text-lg font-medium mb-6 leading-relaxed lg:pr-10"
+              className="text-slate-500 text-base sm:text-lg font-medium mb-4 leading-relaxed lg:pr-10"
             >
-              Delivering millimetric accuracy through advanced <span className="text-slate-900 font-bold">Drone Mapping</span> and traditional <span className="text-slate-900 font-bold">Analysis</span> for premier projects.
+              Accomplished <span className="text-slate-900 font-bold">Senior Surveyor</span> and Drone Pilot with 15+ years of expertise in pipelines and treatment plants. Delivering millimetric accuracy and strategic consulting for premier infrastructure development.
             </motion.p>
 
             {/* Quick Metrics (Modern Strip) */}
@@ -77,11 +77,11 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="flex flex-wrap justify-center lg:justify-start gap-6 mb-8"
+              className="flex flex-wrap justify-center lg:justify-start gap-6 mb-6"
             >
               {[
                 { label: "Accuracy", value: "±5mm" },
-                { label: "Experience", value: "10+ Yrs" },
+                { label: "Experience", value: "15+ Yrs" },
                 { label: "Software", value: "ArcGIS" }
               ].map((item, i) => (
                 <div key={i} className="flex flex-col border-l border-slate-200 pl-4">
@@ -99,14 +99,20 @@ const Hero = () => {
               className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-3"
             >
               <a
+                href="#resume"
+                className="group relative inline-flex items-center justify-center gap-2 bg-slate-900 text-white font-bold text-[13px] px-8 py-3 rounded-full transition-all duration-300 hover:bg-blue-600 hover:scale-105 active:scale-95 shadow-lg shadow-blue-500/10"
+              >
+                VIEW RESUME
+              </a>
+              <a
                 href="#projects"
-                className="group relative inline-flex items-center justify-center gap-2 bg-slate-900 text-white font-bold text-[13px] px-8 py-3 rounded-full transition-all duration-300 hover:bg-blue-600 hover:scale-105 active:scale-95"
+                className="inline-flex items-center justify-center gap-2 bg-slate-100 text-slate-700 font-bold text-[13px] px-8 py-3 rounded-full hover:bg-slate-200 transition-all duration-300 active:scale-95"
               >
                 SURVEY PROJECTS
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 bg-slate-100 text-slate-700 font-bold text-[13px] px-8 py-3 rounded-full hover:bg-slate-200 transition-all duration-300 active:scale-95"
+                className="inline-flex items-center justify-center gap-2 bg-white/50 backdrop-blur-sm border border-slate-200 text-slate-700 font-bold text-[13px] px-8 py-3 rounded-full hover:bg-white/80 transition-all duration-300 active:scale-95"
               >
                 GET IN TOUCH
               </a>
@@ -118,58 +124,53 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.95, x: 20 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="relative order-1 lg:order-2 flex justify-center"
+            className="relative order-1 lg:order-2 flex justify-center lg:justify-end"
           >
-            {/* Visual Depth Elements */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-blue-500/5 rounded-full blur-[80px]" />
+            {/* Ambient Background Glow */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
             
-            <div className="relative">
-              {/* Technical Frame */}
-              <div className="relative w-full max-w-[340px] xl:max-w-[380px] aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl border border-white bg-white p-2.5">
-                <div className="w-full h-full rounded-[1.4rem] overflow-hidden relative">
-                  <img
-                    src={profileImg}
-                    alt="Mohsin Aftab"
-                    className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-1000"
-                  />
-                  {/* Subtle UI Overlays */}
-                  <div className="absolute top-3 right-3 glass px-2.5 py-1 rounded-full flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-                    <span className="text-[9px] font-black text-slate-900 tracking-tighter uppercase">Online</span>
-                  </div>
+            <div className="relative group">
+              {/* Technical Marker Overlays */}
+              <div className="absolute -top-4 -left-4 w-12 h-12 border-l-2 border-t-2 border-blue-500/40 rounded-tl-xl z-20 transition-all duration-500 group-hover:-top-6 group-hover:-left-6" />
+              <div className="absolute -bottom-4 -right-4 w-12 h-12 border-r-2 border-b-2 border-amber-500/40 rounded-br-xl z-20 transition-all duration-500 group-hover:-bottom-6 group-hover:-right-6" />
+
+              {/* Main Image Container */}
+              <div className="relative w-full max-w-[280px] sm:max-w-[320px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border border-white/20 bg-slate-900">
+                <img
+                  src={profileImg}
+                  alt="Mohsin Aftab"
+                  className="w-full h-full object-cover opacity-90 grayscale-[0.2] hover:grayscale-0 hover:scale-105 transition-all duration-700"
+                />
+                
+                {/* Status Overlay */}
+                <div className="absolute top-4 right-4 glass px-3 py-1.5 rounded-full flex items-center gap-2 border border-white/20">
+                  <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                  <span className="text-[10px] font-black text-slate-900 tracking-tighter uppercase">ACTIVE SITE</span>
                 </div>
+
+                {/* Bottom Info Gradient */}
+                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-slate-900/80 to-transparent pointer-events-none" />
               </div>
 
-              {/* Floating Tech Badge (More Compact) */}
+              {/* Redesigned Floating Badge */}
               <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1 }}
-                className="absolute -bottom-4 -left-4 lg:-left-8 bg-white px-5 py-4 rounded-[1.5rem] shadow-xl border border-slate-50 flex items-center gap-4"
+                className="absolute -bottom-6 -left-6 lg:-left-12 glass-strong px-6 py-4 rounded-2xl shadow-xl border border-white/40 flex items-center gap-4 z-30"
               >
-                <div className="w-11 h-11 rounded-xl bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-100">
+                <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
                   <Crosshair className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-0.5">Expertise</p>
-                  <p className="text-sm font-black text-slate-900 tracking-tight">LAND SURVEYOR</p>
+                  <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest leading-none mb-1">Professional Role</p>
+                  <p className="text-[13px] font-black text-slate-900 tracking-tight leading-none">SENIOR SURVEYOR</p>
                 </div>
               </motion.div>
             </div>
           </motion.div>
         </div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30"
-        animate={{ y: [0, 8, 0] }}
-        transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-      >
-        <span className="mono-tag text-slate-400 uppercase text-[9px] tracking-[0.2em]">SCROLL</span>
-        <div className="w-[1px] h-12 bg-gradient-to-b from-blue-500/40 to-transparent" />
-        <ArrowDown className="w-4 h-4 text-blue-500/50" />
-      </motion.div>
     </section>
   );
 };

@@ -3,9 +3,9 @@ import { useState } from "react";
 import { Mail, Phone, MapPin, Send, MessageSquare } from "lucide-react";
 
 const contactInfo = [
-  { icon: Phone,  label: "Phone",    value: "+966 XX XXX XXXX",    href: "tel:+966XXXXXXXXX" },
-  { icon: Mail,   label: "Email",    value: "surveyor@example.com", href: "mailto:surveyor@example.com" },
-  { icon: MapPin, label: "Location", value: "Saudi Arabia",         href: "#" },
+  { icon: Phone, label: "Phone", value: "+966 0582384135 \\ 0581297689 ", href: "tel:+966XXXXXXXXX" },
+  { icon: Mail, label: "Email", value: "mohsinaftab@outlook.com ", href: "mailto:surveyor@example.com" },
+  { icon: MapPin, label: "Location", value: "Saudi Arabia", href: "#" },
 ];
 
 const Contact = () => {

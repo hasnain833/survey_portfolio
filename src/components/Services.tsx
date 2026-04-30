@@ -38,9 +38,16 @@ const services = [
     color: "amber",
   },
   {
+    icon: Compass,
+    title: "Sewerage & Treatment Plants",
+    description: "Specialized layout, leveling, and inspection for sewerage networks and wastewater treatment systems.",
+    tag: "INFRASTRUCTURE",
+    color: "blue",
+  },
+  {
     icon: Globe,
     title: "GIS & Spatial Analysis",
-    description: "Geographic information system mapping and spatial data analysis for infrastructure planning and development.",
+    description: "Geographic information system mapping and spatial data analysis for infrastructure planning.",
     tag: "GIS",
     color: "teal",
   },
@@ -67,7 +74,7 @@ const Services = () => {
           viewport={{ once: true }}
           className="flex items-center gap-4 mb-6"
         >
-          <span className="section-badge">// 02 — Services</span>
+          <span className="section-badge">// 04 — Services</span>
           <div className="h-px flex-1 bg-gradient-to-r from-blue-500/30 to-transparent" />
         </motion.div>
 

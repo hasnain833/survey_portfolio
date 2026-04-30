@@ -5,10 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Drone", href: "#drone" },
-  { label: "Projects", href: "#projects" },
+  { label: "Resume", href: "#resume" },
+  { label: "Expertise", href: "#expertise" },
   { label: "Skills", href: "#skills" },
+  { label: "Services", href: "#services" },
+  { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -42,11 +43,10 @@ const Navbar = () => {
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className={`group flex items-center gap-8 px-6 py-3 rounded-full transition-all duration-500 ${
-            scrolled
+          className={`group flex items-center gap-8 px-6 py-3 rounded-full transition-all duration-500 ${scrolled
               ? "glass-strong shadow-lg border-white/20"
               : "glass border-transparent"
-          }`}
+            }`}
         >
           {/* Logo */}
           <a
@@ -69,11 +69,10 @@ const Navbar = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  className={`relative px-5 py-1.5 text-[13px] font-bold rounded-full transition-all duration-300 ${
-                    isActive
+                  className={`relative px-5 py-1.5 text-[13px] font-bold rounded-full transition-all duration-300 ${isActive
                       ? "text-slate-900"
                       : "text-slate-500 hover:text-slate-900"
-                  }`}
+                    }`}
                 >
                   {isActive && (
                     <motion.span

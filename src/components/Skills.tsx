@@ -11,7 +11,7 @@ const skills = [
 ];
 
 const tools = [
-  "Trimble", "Leica", "DJI Phantom / Matrice", "AutoCAD Civil 3D",
+  "Trimble", "Leica", "DJI Phantom / Matrice", "AutoCAD Civil 3D", "AutoCAD 2D",
   "ArcGIS", "Pix4D", "Agisoft Metashape", "Global Mapper",
 ];
 
@@ -139,7 +139,7 @@ const Skills = () => {
                 {[
                   { v: "200+", l: "Projects" },
                   { v: "15+", l: "Regions" },
-                  { v: "10+", l: "Years" },
+                  { v: "15+", l: "Years" },
                 ].map((s) => (
                   <div key={s.l} className="text-center">
                     <p className="text-xl font-bold text-gradient-amber" style={{ fontFamily: "var(--font-display)" }}>{s.v}</p>
